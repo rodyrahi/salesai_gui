@@ -142,6 +142,38 @@
       pointer-events: none;
     }
   </style>
+
+
+
+
+   <style>
+ 
+
+ h1.hover-effect {
+      position: relative;
+      font-weight: 200;
+      font-size: 100px;
+      line-height: 1.15;
+      color: #333;
+      display: inline-block;
+      --radius: 0px;
+      --x: 50%;
+      --y: 50%;
+      --glow-color: #1a73e8;
+      background: radial-gradient(circle var(--radius) at var(--x) var(--y), var(--glow-color) 50%, #333 100% );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: --radius 0.5s ease, background 0.5s ease;
+    }
+
+    h1.hover-effect.glow {
+      --radius: 250px;
+      
+    }
+  </style>
+
+
+  
 </head>
 
 
@@ -262,47 +294,8 @@
             </div>
 
             <div class="card-body p-3 d-flex justify-content-left align-items-left">
-              <div class="rounded-4 row h-100 w-100 p-auto">
-
-                
-<div id="pieChart3D" style="width: 450px; height: 450px; position: absolute; top: 0; left: 0;"></div>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-3d.js"></script>
-<script>
-  Highcharts.chart('pieChart3D', {
-    chart: {
-      type: 'pie',
-      backgroundColor: 'transparent',
-      options3d: {
-        enabled: true,
-        alpha: 45,
-        beta: 0
-      }
-    },
-    title: {
-      text: ''
-    },
-    plotOptions: {
-      pie: { colors: ['#6161FF', '#4ECDC4', '#FFD93D'],
-        depth: 45
-      }
-    },
-    series: [{
-      name: 'Stock',
-      data: [
-        ['Overstock', 30],
-        ['Optimal', 50],
-        ['Understock', 20]
-      ]
-    }]
-  });
-</script>
-
-
-
-
-                
-              </div>
+              <img src="./infographic.png" class=" rounded-4 " width="100%" alt="" >
+              
             </div>
           </div>
 
@@ -322,96 +315,140 @@
       </div>
     </div>
     <div class="row rounded-4  d-flex align-items-center text-dark  mx-0 my-5 text-center p-auto">
-      <h1 class="my-5" style="font-family: Poppins,sans-serif; font-weight: 200; font-size: 72px; line-height: 1.15;">
+      <h1 class="my-5 hover-effect" id="hoverText" style="font-family: Poppins,sans-serif; font-weight: 200; font-size: 72px; line-height: 1.15;">
         “...stop guessing, start knowing because every decision costs you money.”
       </h1>
+       <script>
+    const text = document.getElementById('hoverText');
+
+    text.addEventListener('mousemove', (e) => {
+      const rect = text.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      text.style.setProperty('--x', `${x}px`);
+      text.style.setProperty('--y', `${y}px`);
+      if (!text.classList.contains('glow')) {
+        text.classList.add('glow');
+      }
+    });
+
+    text.addEventListener('mouseleave', () => {
+      text.classList.remove('glow');
+    });
+  </script>
       <h4 class="text-secondary my-4
       ">Forecast demand. Optimize inventory. Grow faster with AI you can trust. </h4>
-      <div class="text-center">
+      <div class="text-center mb-5">
         <a class="btn btn-danger btn-lg " href="#" style="border: 1px dashed #dee2e6;">
           <i class="fas fa-bolt me-2"></i>Start Free Demo</a>
       </div>
 
+     
+
     </div>
 
-    <div class="row rounded-4  d-flex  text-light  mx-0 my-5  bg-dark  " style=" font-family: poppins; ">
-      <div class="col-6">
-        <div class="text-center  rounded-4 m-3 " style="background-color: #6161FF;">
 
-            <img src="./reduce.png" class="img-fluid" width="380px" alt="">
+    <h1 class="text-dark text-center mt-5" style="font-family: poppins; font-weight:100">We Got You Covered</h1>
+    <div class="row rounded-4  d-flex  text-light  mx-0 mb-5   " style=" font-family: poppins; background-color: #121f2a;    ">
+      <div class="col-6 p-0">
+        <div class="text-center   " style="background-color: #6161FF; overflow:hidden; border-radius: 1.0rem 0rem 0rem 1.0rem; "  >
+
+            <img src="./infographic.png" class="rounded-4 shadow-lg" width="1000px" alt="" style="transform: translateY(102px) translateX(120px);">
         </div>
       </div>
       <div class="col-6  align-items-center d-flex  justify-content-center">
-        <div class="my-auto">
+        <div class="my-auto" style="max-width: 550px; font-family: 'Poppins', sans-serif; ">
+          <span class="badge bg-light text-primary rounded-pill mb-3  p-2" style="font-size: 1.2rem; font-weight: 200; ">
+            
+          <i class="fas fa-check-circle text-success me-1"></i> Save Money and Time
+            
+          </span>
+          <p class="card-text mb-1">Save money and time by not guessing what to buy and how much to buy let kamingo tell you about how much to buy which proucts needs attention which do not with its ML models.</p>
+          
+          <span class="badge bg-light text-primary rounded-pill mb-3 mt-4 p-2" style="font-size: 1.2rem; font-weight: 200;">
+            
+          <i class="fas fa-check-circle text-success me-1"></i> Avoid Over Stocking Items
+            
+          </span>
+          <p class="card-text mb-1">Leverage Machine Lerning models that allows you to pridict how much stock is needed which will boost sales and avoid over stocing use the forecasting chart to look into the forecasting.</p>
+          
+          <span class="badge bg-light text-primary rounded-pill mb-3 mt-4 p-2" style="font-size: 1.2rem; font-weight: 200;">
+            
+          <i class="fas fa-check-circle text-success me-1"></i> Get Accurate Forecasting
+            
+          </span>
+          <p class="card-text  mb-4">Our state of the art ML models are created based on you data which allows them to give forecasting to be most accurate what ever is best for your data will be used.</p>
 
-          <h1 class="card-title ">Reduce Forecasting Errors</h1>
-          <p class="card-text text-secondary ">Leverage AI to enhance your sales forecasting accuracy and make data-driven decisions.</p>
+          <!-- <h3 class="card-title mb-2"><i class="fas fa-check-circle text-warning me-1"></i> Optimize Inventory Management</h3>
+          
+          <h3 class="card-title mb-2"> <i class="fas fa-check-circle text-warning me-1"></i> Enhance Customer Satisfaction</h3>
+          <p class="card-text text-secondary">Improve customer satisfaction with accurate delivery estimates and proactive communication.</p> -->
+
         </div>
-               <!-- <ul>
-                 <li class="my-3">
-                 </li>
-                 <li class="my-3">
-                   <h3 class="card-title mb-2">Optimize Inventory Management</h3>
-                   <p class="card-text text-secondary">Optimize your inventory management with real-time insights and automated alerts.</p>
-                 </li>
-                 <li class="my-3">
-                   <h3 class="card-title mb-2">Enhance Customer Satisfaction</h3>
-                   <p class="card-text text-secondary">Improve customer satisfaction with accurate delivery estimates and proactive communication.</p>
-                 </li>
-               </ul> -->
+              
       </div>
     </div>
 
 
-    <div class="row rounded-4  d-flex align-items-center text-dark  mx-0 my-5 text-center ">
-      <div class="col-md-4 text-start my-2">
-        <div class="card rounded-4 p-4  h-100" style="border: none;">
-          <div class="card-body">
-            <div class="bg-success rounded-4 p-5 mb-3 text-center">
+    <br >
+    <div class="row rounded-4  d-flex align-items-center text-dark  mx-0 my-5  text-center py-5 ">
+      <div class="col-md-4 text-center my-2">
+        <h5 class="mb-2" style=" font-family: poppins;  font-weight: 500; ">
+          “fsuuiluikyujggfnbnntytrytyhgfgr“
+        </h5>
+        <div class="text-warning mb-3">
 
-
-              <img src="./reduce.png" class="img-fluid" width="180px" alt="">
-            </div>
-            <h2 class="fw-bold card-title ">Reduce Forecasting Errors</h2>
-            <p class="card-text text-muted">Leverage AI to enhance your sales forecasting accuracy and make data-driven decisions.</p>
-          </div>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
         </div>
-      </div>
-      <div class="col-md-4 text-start my-2">
-        <div class="card rounded-4 p-4  h-100" style="border: none;">
-          <div class="card-body">
-             <div class="bg-primary rounded-4 p-5 mb-3 text-center">
+        
+        <img class="img-fluid rounded-circle shadow-sm" width="180px" height="200px" src="testomonials/rishit.png" alt="">
+        <h5 class="mt-3">Rishit Pol\\9999999999999966666666666666555555555555555444455uuu;;;;;;;;;;;;;;;\]]]]]''qaaaaaaaaaaaaaaaaaaxyyy....,..
+
+          \\\\\\\\\\\\\\
 
 
-              <img src="./stock.png" class="img-fluid" width="180px" alt="">
-            </div>
-            <h2 class="fw-bold card-title ">Optimize Inventory Management</h2>
-            <p class="card-text text-muted">Optimize your inventory management with real-time insights and automated alerts.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 text-start my-2">
-        <div class="card rounded-4 p-4  h-100" style="border: none;">
-          <div class="card-body">
-             <div class="bg-warning rounded-4 p-5 mb-3 text-center">
-
-
-              <img src="./stars.png" class="img-fluid" width="180px" alt="">
-            </div>
-            <h2 class="fw-bold card-title ">Enhance Customer Satisfaction</h2>
-            <p class="card-text text-muted ">Improve customer satisfaction with accurate delivery estimates and proactive communication.</p>
-          
-          </div>
-        </div>
-      </div>
-    
-
-    </div>
-
-    <div class="row rounded-4  d-flex align-items-center text-dark  mx-0 my-5 text-center ">
-      <div class="col-md-4 text-start my-2">
-        <img class="img-fluid rounded-circle" width="180px" height="200px" src="https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D" alt="">
+        </h5>
       </div>
       <div class="col-md-4 text-start my-2">
         
