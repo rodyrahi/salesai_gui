@@ -146,10 +146,8 @@
 
 
 
-   <style>
- 
-
- h1.hover-effect {
+  <style>
+    h1.hover-effect {
       position: relative;
       font-weight: 200;
       font-size: 100px;
@@ -160,7 +158,7 @@
       --x: 50%;
       --y: 50%;
       --glow-color: #1a73e8;
-      background: radial-gradient(circle var(--radius) at var(--x) var(--y), var(--glow-color) 50%, #333 100% );
+      background: radial-gradient(circle var(--radius) at var(--x) var(--y), var(--glow-color) 50%, #333 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: --radius 0.5s ease, background 0.5s ease;
@@ -168,12 +166,12 @@
 
     h1.hover-effect.glow {
       --radius: 250px;
-      
+
     }
   </style>
 
 
-  
+
 </head>
 
 
@@ -191,8 +189,7 @@
         <a class="navbar-brand text-secondary " style="font-family: 'Poppins', sans-serif; font-weight: 600;" href="#">
           <img src="kamingo_favicon.webp" width="30" height="30" alt="" srcset="">
           KAMINGO</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -220,21 +217,20 @@
 
 
 
-  <script>
-    const navbar = document.querySelector('.navbar');
+    <script>
+      const navbar = document.querySelector('.navbar');
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 0) {
-        navbar.classList.add('shadow-sm');
-      } else {
-        navbar.classList.remove('shadow-sm');
-      }
-    });
-  </script>
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+          navbar.classList.add('shadow-sm');
+        } else {
+          navbar.classList.remove('shadow-sm');
+        }
+      });
+    </script>
 
 
-    <div class="row overflow-hidden rounded-4 shadow-sm d-flex align-items-center mt-5 mx-0 py-5"
-      style=" background: linear-gradient(190deg, #0b54c6, #000000); ">
+    <div class="row overflow-hidden rounded-4 shadow-sm d-flex align-items-center mt-5 mx-0 py-5" style=" background: linear-gradient(190deg, #0b54c6, #000000); ">
 
 
 
@@ -255,35 +251,35 @@
 
 
             <!-- <ul class="list-unstyled mb-0 text-light" style="font-family: 'Poppins', sans-serif;  font-size: 15px;"> -->
-            
-              <!-- <li>
+
+            <!-- <li>
                 <i class="fas fa-check-circle text-success me-2"></i> Cancel anytime
               </li> -->
             <!-- </ul> -->
           </div>
-          
-                <div class="row my-3" style="font-family: 'Poppins', sans-serif;  font-size: 15px;">
-                  <div class="col d-flex">
-                    <div class="me-2">
-                      <i class="fas fa-check-circle text-success me-1"></i> No sign-up required
-                    </div>
-                    |
-                    <div class="ms-2">
-                      <i class="fas fa-check-circle text-success me-1"></i> No credit card required
-                    </div>
-                  </div>
-              
 
-                 
-               
-                  
-                </div>
+          <div class="row my-3" style="font-family: 'Poppins', sans-serif;  font-size: 15px;">
+            <div class="col d-flex">
+              <div class="me-2">
+                <i class="fas fa-check-circle text-success me-1"></i> No sign-up required
+              </div>
+              |
+              <div class="ms-2">
+                <i class="fas fa-check-circle text-success me-1"></i> No credit card required
+              </div>
+            </div>
+
+
+
+
+
+          </div>
         </div>
-        
+
 
       </div>
 
-      
+
       <div class="col-md-6" style="transform:  rotateX(16deg) rotateY(28deg) rotateZ(1deg) translateX(-150px);">
         <div class="card-stack">
 
@@ -294,8 +290,8 @@
             </div>
 
             <div class="card-body p-3 d-flex justify-content-left align-items-left">
-              <img src="./infographic.png" class=" rounded-4 " width="100%" alt="" >
-              
+              <img src="./infographic.png" class=" rounded-4 " width="100%" alt="">
+
             </div>
           </div>
 
@@ -315,35 +311,35 @@
       </div>
     </div>
     <div class="row rounded-4  d-flex align-items-center text-dark  mx-0 my-5 text-center p-auto">
-      <h1 class="my-5 hover-effect" id="hoverText" style="font-family: Poppins,sans-serif; font-weight: 200; font-size: 72px; line-height: 1.15;">
+      <h1 class="mt-5 hover-effect" id="hoverText" style="font-family: Poppins,sans-serif; font-weight: 200; font-size: 72px; line-height: 1.15;">
         “...stop guessing, start knowing because every decision costs you money.”
       </h1>
-       <script>
-    const text = document.getElementById('hoverText');
+      <script>
+        const text = document.getElementById('hoverText');
 
-    text.addEventListener('mousemove', (e) => {
-      const rect = text.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      text.style.setProperty('--x', `${x}px`);
-      text.style.setProperty('--y', `${y}px`);
-      if (!text.classList.contains('glow')) {
-        text.classList.add('glow');
-      }
-    });
+        text.addEventListener('mousemove', (e) => {
+          const rect = text.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          text.style.setProperty('--x', `${x}px`);
+          text.style.setProperty('--y', `${y}px`);
+          if (!text.classList.contains('glow')) {
+            text.classList.add('glow');
+          }
+        });
 
-    text.addEventListener('mouseleave', () => {
-      text.classList.remove('glow');
-    });
-  </script>
-      <h4 class="text-secondary my-4
+        text.addEventListener('mouseleave', () => {
+          text.classList.remove('glow');
+        });
+      </script>
+      <h4 class="text-secondary mb-4
       ">Forecast demand. Optimize inventory. Grow faster with AI you can trust. </h4>
       <div class="text-center mb-5">
         <a class="btn btn-danger btn-lg " href="#" style="border: 1px dashed #dee2e6;">
           <i class="fas fa-bolt me-2"></i>Start Free Demo</a>
       </div>
 
-     
+
 
     </div>
 
@@ -351,31 +347,31 @@
     <h1 class="text-dark text-center mt-5" style="font-family: poppins; font-weight:100">We Got You Covered</h1>
     <div class="row rounded-4  d-flex  text-light  mx-0 mb-5   " style=" font-family: poppins; background-color: #121f2a;    ">
       <div class="col-6 p-0">
-        <div class="text-center   " style="background-color: #6161FF; overflow:hidden; border-radius: 1.0rem 0rem 0rem 1.0rem; "  >
+        <div class="text-center   " style="background-color: #6161FF; overflow:hidden; border-radius: 1.0rem 0rem 0rem 1.0rem; ">
 
-            <img src="./infographic.png" class="rounded-4 shadow-lg" width="1000px" alt="" style="transform: translateY(102px) translateX(120px);">
+          <img src="./infographic.png" class="rounded-4 shadow-lg" width="1000px" alt="" style="transform: translateY(102px) translateX(120px);">
         </div>
       </div>
       <div class="col-6  align-items-center d-flex  justify-content-center">
         <div class="my-auto" style="max-width: 550px; font-family: 'Poppins', sans-serif; ">
           <span class="badge bg-light text-primary rounded-pill mb-3  p-2" style="font-size: 1.2rem; font-weight: 200; ">
-            
-          <i class="fas fa-check-circle text-success me-1"></i> Save Money and Time
-            
+
+            <i class="fas fa-check-circle text-success me-1"></i> Save Money and Time
+
           </span>
           <p class="card-text mb-1">Save money and time by not guessing what to buy and how much to buy let kamingo tell you about how much to buy which proucts needs attention which do not with its ML models.</p>
-          
+
           <span class="badge bg-light text-primary rounded-pill mb-3 mt-4 p-2" style="font-size: 1.2rem; font-weight: 200;">
-            
-          <i class="fas fa-check-circle text-success me-1"></i> Avoid Over Stocking Items
-            
+
+            <i class="fas fa-check-circle text-success me-1"></i> Avoid Over Stocking Items
+
           </span>
           <p class="card-text mb-1">Leverage Machine Lerning models that allows you to pridict how much stock is needed which will boost sales and avoid over stocing use the forecasting chart to look into the forecasting.</p>
-          
+
           <span class="badge bg-light text-primary rounded-pill mb-3 mt-4 p-2" style="font-size: 1.2rem; font-weight: 200;">
-            
-          <i class="fas fa-check-circle text-success me-1"></i> Get Accurate Forecasting
-            
+
+            <i class="fas fa-check-circle text-success me-1"></i> Get Accurate Forecasting
+
           </span>
           <p class="card-text  mb-4">Our state of the art ML models are created based on you data which allows them to give forecasting to be most accurate what ever is best for your data will be used.</p>
 
@@ -385,15 +381,57 @@
           <p class="card-text text-secondary">Improve customer satisfaction with accurate delivery estimates and proactive communication.</p> -->
 
         </div>
-              
+
       </div>
     </div>
 
 
-    <br >
+    <br>
+        <h1 class="text-dark text-center mt-5" style="font-family: poppins; font-weight:100">People Who Trust Us</h1>
     <div class="row rounded-4  d-flex align-items-center text-dark  mx-0 my-5  text-center py-5 ">
       <div class="col-md-4 text-center my-2">
         <h5 class="mb-2" style=" font-family: poppins;  font-weight: 500; ">
+          “We where able to save a lot of money by using kamingo salesai it <i class="text-danger">  <b>made sales easy.</b> </i>“
+        </h5>
+        <div class="text-warning mb-3">
+
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <img class="img-fluid rounded-circle shadow-sm" width="180px" height="200px" src="testomonials/rishit.png" alt="">
+        <h5 class="mt-3">Rishit Pal
+
+
+
+
+
+        </h5>
+      </div>
+      <div class="col-md-4 text-center my-2">
+         <h5 class="mb-2" style=" font-family: poppins;  font-weight: 500; ">
+          “kamingo salesai made<i class="text-danger"> <b>sales forecasting easy and faster</b> </i> for us we didn't knew this would make this much diffrence.“
+        </h5>
+        <div class="text-warning mb-3">
+
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <img class="img-fluid rounded-circle shadow-sm" width="180px" height="200px" src="testomonials/pakhi.png" alt="">
+        <h5 class="mt-3">Pakhi Divakaran
+
+
+
+      </div>
+      <div class="col-md-4 text-center my-2">
+         <h5 class="mb-2" style=" font-family: poppins;  font-weight: 500; ">
           “fsuuiluikyujggfnbnntytrytyhgfgr“
         </h5>
         <div class="text-warning mb-3">
@@ -404,60 +442,13 @@
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
         </div>
-        
+
         <img class="img-fluid rounded-circle shadow-sm" width="180px" height="200px" src="testomonials/rishit.png" alt="">
-        <h5 class="mt-3">Rishit Pol\\9999999999999966666666666666555555555555555444455uuu;;;;;;;;;;;;;;;\]]]]]''qaaaaaaaaaaaaaaaaaaxyyy....,..
-
-          \\\\\\\\\\\\\\
+        <h5 class="mt-3">Rishit Pal
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </h5>
       </div>
-      <div class="col-md-4 text-start my-2">
-        
-      
-      </div>
-      <div class="col-md-4 text-start my-2">
-       
-      </div>
-    
+
 
     </div>
 
@@ -482,9 +473,7 @@
         <div class="row g-4 p-5">
           <div class="col-md-6 col-lg-4">
             <div class="feature-card p-4 h-100 bg-white shadow-sm">
-              <div
-                class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-                style="width: 48px; height: 48px;">
+              <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 48px; height: 48px;">
                 <i class="fa-solid fa-bell text-primary fs-5"></i>
               </div>
               <h4 class="h5 fw-bold mb-3">Proactive Alerts</h4>
@@ -495,9 +484,7 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="feature-card p-4 h-100 bg-white shadow-sm">
-              <div
-                class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-                style="width: 48px; height: 48px;">
+              <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 48px; height: 48px;">
                 <i class="fa-solid fa-chart-line text-primary fs-5"></i>
               </div>
               <h4 class="h5 fw-bold mb-3">Smart Forecasting</h4>
@@ -508,9 +495,7 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="feature-card p-4 h-100 bg-white shadow-sm">
-              <div
-                class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-                style="width: 48px; height: 48px;">
+              <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 48px; height: 48px;">
                 <i class="fa-solid fa-envelope text-primary fs-5"></i>
               </div>
               <h4 class="h5 fw-bold mb-3">Automated Reports</h4>
@@ -521,9 +506,7 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="feature-card p-4 h-100 bg-white shadow-sm">
-              <div
-                class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-                style="width: 48px; height: 48px;">
+              <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 48px; height: 48px;">
                 <i class="fa-solid fa-plug text-primary fs-5"></i>
               </div>
               <h4 class="h5 fw-bold mb-3">Seamless Integration</h4>
@@ -533,9 +516,7 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="feature-card p-4 h-100 bg-white shadow-sm">
-              <div
-                class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-                style="width: 48px; height: 48px;">
+              <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 48px; height: 48px;">
                 <i class="fa-solid fa-mobile-screen text-primary fs-5"></i>
               </div>
               <h4 class="h5 fw-bold mb-3">Mobile Ready</h4>
@@ -545,9 +526,7 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="feature-card p-4 h-100 bg-white shadow-sm">
-              <div
-                class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
-                style="width: 48px; height: 48px;">
+              <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 48px; height: 48px;">
                 <i class="fa-solid fa-users text-primary fs-5"></i>
               </div>
               <h4 class="h5 fw-bold mb-3">Team Collaboration</h4>
@@ -564,8 +543,7 @@
             <h3 class="fw-bold mb-4">Ready to Transform Your Sales Forecasting?</h3>
             <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
               <!-- Updated button to open modal -->
-              <button class="btn btn-primary px-5 py-3 rounded-pill shadow-sm" data-bs-toggle="modal"
-                data-bs-target="#trialModal">
+              <button class="btn btn-primary px-5 py-3 rounded-pill shadow-sm" data-bs-toggle="modal" data-bs-target="#trialModal">
                 Start Now - Just $40/year <i class="fas fa-arrow-right ms-2"></i>
               </button>
               <div class="text-center text-md-start">
