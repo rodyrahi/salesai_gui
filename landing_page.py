@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -15,7 +14,12 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    return templates.TemplateResponse("gui.html", {"request": request})
+    user_agent = request.headers.get("user-agent", "").lower()
+    if "android" in user_agent:
+        template_name = "android_gui.html"
+    else:
+        template_name = "android_gui.html"
+    return templates.TemplateResponse(template_name, {"request": request})
 
 @app.get("/about", response_class=HTMLResponse)
 async def about(request: Request):
