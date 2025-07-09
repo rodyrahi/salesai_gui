@@ -15,11 +15,12 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
     user_agent = request.headers.get("user-agent", "").lower()
-    if "android" in user_agent:
+    if any(mobile in user_agent for mobile in ["android", "iphone", "ipad", "mobile"]):
         template_name = "android_gui.html"
     else:
-        template_name = "android_gui.html"
+        template_name = "gui.html"
     return templates.TemplateResponse(template_name, {"request": request})
+
 
 @app.get("/about", response_class=HTMLResponse)
 async def about(request: Request):
