@@ -232,7 +232,7 @@
 
 
     <div class="row overflow-hidden shadow-sm d-flex align-items-center mt-5 mx-0 "
-      style=" background: linear-gradient(190deg, #0b54c6, #000000); font-family: 'Poppins', sans-serif;">
+      style=" background: linear-gradient(190deg, #0b54c6, #000000); font-family: 'Poppins', sans-serif; max-height: 800px;">
 
 
 
@@ -315,11 +315,11 @@
         </div>
       </div>
     </div>
-    <div class="row rounded-4  d-flex align-items-center text-dark  mx-0 my-5 text-center p-auto">
-      <h1 class="mt-5 hover-effect" id="hoverText"
-        style="font-family: Poppins,sans-serif; font-weight: 200; font-size: 72px; line-height: 1.15;">
+    <div class="row rounded-4  d-flex align-items-center text-dark  mx-0  text-center p-auto">
+      <h6 class=" mt-3 hover-effect" id="hoverText"
+        style="font-family: Poppins,sans-serif; font-weight: 200; font-size: 30px; line-height: 1.15;">
         “...stop guessing, start knowing because every decision costs you money.”
-      </h1>
+      </h6>
       <script>
         const text = document.getElementById('hoverText');
 
@@ -351,59 +351,65 @@
 
 
     <h1 class="text-dark text-center mt-5" style="font-family: poppins; font-weight:100">We Got You Covered</h1>
-    <div class="row rounded-4  d-flex  text-light  mx-0 mb-5   "
+    <div class="row   d-flex  text-light  mx-0 mb-5   "
       style=" font-family: poppins; background-color: #121f2a;    ">
-      <div class="col-6 p-0">
+      <div class="col p-0" style="">
         <div class="text-center   "
-          style="background-color: #6161FF; overflow:hidden; border-radius: 1.0rem 0rem 0rem 1.0rem; ">
+          style="background-color: #6161FF; overflow:hidden; max-height:300px ">
 
           <img src="./static/infographic.png" class="rounded-4 shadow-lg" width="1000px" alt=""
             style="transform: translateY(102px) translateX(120px);">
         </div>
       </div>
-      <div class="col-6  align-items-center d-flex  justify-content-center">
-        <div class="my-auto" style="max-width: 550px; font-family: 'Poppins', sans-serif; ">
-          <span class="badge bg-light text-primary rounded-pill mb-3  p-2"
-            style="font-size: 1.2rem; font-weight: 200; ">
 
-            <i class="fas fa-check-circle text-success me-1"></i> Save Money and Time
+                <div class="col align-items-center d-flex justify-content-center p-3 py-5">
+                  <div id="featureCarousel" class="carousel slide " data-bs-ride="carousel" style="max-width: 550px; font-family: 'Poppins', sans-serif;">
+                    <div class="carousel-indicators" style="gap: 8px; bottom: -55px;">
+                      <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="0" class="active rounded-circle" aria-current="true" aria-label="Slide 1" style="width: 10px; height: 10px;"></button>
+                      <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="1" class="rounded-circle" aria-label="Slide 2" style="width: 10px; height: 10px;"></button>
+                      <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="2" class="rounded-circle" aria-label="Slide 3" style="width: 10px; height: 10px;"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item  text-center active">
+                        <span class="badge bg-light text-center text-primary rounded-pill my-3 p-2" style="font-size: 1.2rem; font-weight: 200;">
+                          <i class="fas fa-check-circle  text-success me-1"></i> Save Money and Time
+                        </span>
+                        <p class="card-text text-center mb-1">Save money and time by not guessing what to buy and how much to buy let kamingo tell
+                          you about how much to buy which proucts needs attention which do not with its ML models.</p>
+                      </div>
+            
+                      <div class="carousel-item text-center ">
+                        <span class="badge bg-light text-center text-primary rounded-pill my-3 p-2" style="font-size: 1.2rem; font-weight: 200;">
+                          <i class="fas fa-check-circle text-success me-1"></i> Avoid Over Stocking Items
+                        </span>
+                        <p class="card-text text-center mb-1">Leverage Machine Lerning models that allows you to pridict how much stock is needed
+                          which will boost sales and avoid over stocing use the forecasting chart to look into the forecasting.</p>
+                      </div>
 
-          </span>
-          <p class="card-text mb-1">Save money and time by not guessing what to buy and how much to buy let kamingo tell
-            you about how much to buy which proucts needs attention which do not with its ML models.</p>
-
-          <span class="badge bg-light text-primary rounded-pill mb-3 mt-4 p-2"
-            style="font-size: 1.2rem; font-weight: 200;">
-
-            <i class="fas fa-check-circle text-success me-1"></i> Avoid Over Stocking Items
-
-          </span>
-          <p class="card-text mb-1">Leverage Machine Lerning models that allows you to pridict how much stock is needed
-            which will boost sales and avoid over stocing use the forecasting chart to look into the forecasting.</p>
-
-          <span class="badge bg-light text-primary rounded-pill mb-3 mt-4 p-2"
-            style="font-size: 1.2rem; font-weight: 200;">
-
-            <i class="fas fa-check-circle text-success me-1"></i> Get Accurate Forecasting
-
-          </span>
-          <p class="card-text  mb-4">Our state of the art ML models are created based on you data which allows them to
-            give forecasting to be most accurate what ever is best for your data will be used.</p>
-
-          <!-- <h3 class="card-title mb-2"><i class="fas fa-check-circle text-warning me-1"></i> Optimize Inventory Management</h3>
+                      <div class="carousel-item text-center ">
+                        <span class="badge bg-light text-center text-primary rounded-pill my-3 p-2" style="font-size: 1.2rem; font-weight: 200;">
+                          <i class="fas fa-check-circle text-success me-1"></i> Get Accurate Forecasting
+                        </span>
+                        <p class="card-text text-center mb-1">Our state of the art ML models are created based on you data which allows them to
+                          give forecasting to be most accurate what ever is best for your data will be used.</p>
+                      </div>
+                    </div>
           
-          <h3 class="card-title mb-2"> <i class="fas fa-check-circle text-warning me-1"></i> Enhance Customer Satisfaction</h3>
-          <p class="card-text text-secondary">Improve customer satisfaction with accurate delivery estimates and proactive communication.</p> -->
-
-        </div>
-
-      </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
     </div>
 
 
-    <br>
     <h1 class="text-dark text-center mt-5" style="font-family: poppins; font-weight:100">People Who Trust Us</h1>
-    <div class="row rounded-4  d-flex align-items-center text-dark  mx-0 my-5  text-center py-5 ">
+    <div class="row rounded-4  d-flex align-items-center text-dark  mx-0 my-2  text-center py-2 ">
       <div class="col-md-4 text-center my-2">
         <h5 class="mb-2" style=" font-family: poppins;  font-weight: 500; ">
           “We where able to save a lot of money by using kamingo salesai it <i class="text-danger"> <b>made sales
@@ -449,7 +455,7 @@
 
 
       </div>
-      <div class="col-md-4 text-center my-2 mb-5 ">
+      <div class="col-md-4 text-center my-2  ">
         <h5 class="mb-2" style=" font-family: poppins;  font-weight: 500; ">
           “fsuuiluikyujggfnbnntytrytyhgfgr“
         </h5>
@@ -473,22 +479,21 @@
     </div>
 
 
-    <br>
-
+   
 
     <h1 class="text-dark text-center mt-5" style="font-family: poppins; font-weight:100">Features</h1>
-    <div class="row  p-2 rounded-4 m-0 mb-5"
+    <div class="row  p-2  m-0 mb-5"
       style="background: radial-gradient(circle, rgb(0, 140, 255) 0%, rgb(0, 34, 85) 100%);">
 
       <div class="row text-dark mt-3" style="font-family: poppins;">
-        <div class="col-7 ">
+        <div class="col ">
 
 
-          <div class=" bg-light rounded-4 shadow p-3">
+          <div class=" bg-light rounded-4 shadow p-3 mb-4">
             <div class="bg-primary text-light rounded-4 m-2 mb-4 shadow-sm"
               style="overflow: hidden; max-height: 250px;">
               <img src="./static/notification.png" class="img-fluid " width="500px" alt="" srcset=""
-                style="transform: translateX(100px) translateY(-50px)">
+                style="transform: translateX(0px) translateY(0px)">
 
             </div>
             <h2> <i class="fas fa-check-circle text-success me-1"></i>
@@ -501,7 +506,7 @@
 
         </div>
 
-        <div class="col-5">
+        <div class="col">
 
 
           <div class=" bg-light rounded-4 shadow p-3">
@@ -521,14 +526,14 @@
       </div>
 
       <div class="row text-dark my-3 mb-3" style="font-family: poppins;">
-        <div class="col-5">
+        <div class="col">
 
 
           <div class=" bg-light rounded-4 shadow p-3">
             <div class="bg-primary text-light rounded-4 m-2 mb-4 shadow-sm"
               style="overflow: hidden; max-height: 250px;">
               <img src="https://media.finebi.com/strapi/fdl_banner_d0c8255b35.png" class="img-fluid " width="" alt=""
-                srcset="" style="transform: translateY(-40px);">
+                srcset="" style="transform: translateY(0px);">
 
             </div>
             <h2> <i class="fas fa-check-circle text-success me-1"></i>
@@ -536,10 +541,10 @@
             <p>Plug-and-play connectivity with major POS and inventory management systems.</p>
           </div>
         </div>
-        <div class="col-7 ">
+        <div class="col ">
 
 
-          <div class=" bg-light rounded-4 shadow p-3">
+          <div class=" bg-light rounded-4 shadow p-3 my-4">
             <div class="bg-primary text-light rounded-4 m-2 mb-4 shadow-sm text-center"
               style="overflow: hidden; max-height: 250px;">
               <img src="./static/computer.png" class="img-fluid " width="250px" alt="" srcset=""
@@ -569,12 +574,12 @@
     <br>
       
       <h1 class="text-dark text-center mt-5" style="font-family: poppins; font-weight:600">Frequently Asked Questions</h1>
-        <div class="row justify-content-center mt-5 " style="font-family: poppins; font-weight:500; font-size: 1.5rem; ">
+        <div class="row justify-content-center mt-5 " style="font-family: poppins; font-weight:500; font-size: 1.0rem; ">
           <div class="col">
             <div class="accordion " id="faqAccordion">
               <div class="accordion-item ">
                 <h2 class="accordion-header">
-                  <button class="accordion-button p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="font-size: 2rem;">
+                  <button class="accordion-button p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="font-size: 1.2rem;">
                     Is my data safe and private?
                   </button>
                 </h2>
@@ -587,7 +592,7 @@
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"  style="font-size: 2rem;">
+                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"  style="font-size: 1.2rem;">
                     What is this website for?
                   </button>
                 </h2>
@@ -598,7 +603,7 @@
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"  style="font-size: 2rem;">
+                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"  style="font-size: 1.2rem;">
                     How does the forecasting work?
                   </button>
                 </h2>
@@ -610,7 +615,7 @@
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq4"  style="font-size: 2rem;">
+                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq4"  style="font-size: 1.2rem;">
                    What output will I receive after uploading the data?
                   </button>
                 </h2>
@@ -626,7 +631,7 @@
 
                             <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq5"  style="font-size: 2rem;">
+                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq5"  style="font-size: 1.2rem;">
                    What if the CSV file format is incorrect?
                   </button>
                 </h2>
@@ -638,7 +643,7 @@
 
              <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq6"  style="font-size: 2rem;">
+                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq6"  style="font-size: 1.2rem;">
                   How accurate is the sales prediction?
                   </button>
                 </h2>
@@ -651,7 +656,7 @@
 
                             <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq7"  style="font-size: 2rem;">
+                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq7"  style="font-size: 1.2rem;">
                    What type of data do I need to upload?
                   </button>
                 </h2>
@@ -664,7 +669,7 @@ You should upload sales data in CSV format. Ideally, it should include columns l
 
                             <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq8"  style="font-size: 2rem;">
+                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq8"  style="font-size: 1.2rem;">
                   Is this service free to use?
                   </button>
                 </h2>
@@ -677,7 +682,7 @@ You should upload sales data in CSV format. Ideally, it should include columns l
 
                             <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq9"  style="font-size: 2rem;">
+                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq9"  style="font-size: 1.2rem;">
                   Who can I contact for support?
                   </button>
                 </h2>
@@ -690,7 +695,7 @@ You can reach our support team via email (rajvendrarahi126@gmail.com) or live ch
 
                             <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq10"  style="font-size: 2rem;">
+                  <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq10"  style="font-size: 1.2rem;">
                    How do I know the forecasting is reliable?
                   </button>
                 </h2>
@@ -714,10 +719,10 @@ We regularly validate our models with test data and real-world results. You can 
 
         <br>
         <br>
-        <div class="row bg-dark m-0 mt-5 p-4 rounded-4" style=" background: linear-gradient(190deg, #0b54c6, #000000);" >
-          <h1 style="font-family: poppins ; font-weight:200; font-size:3rem" >Ready to<i class="fa-solid fa-arrow-right ms-3"></i></h1>
-          <h1 style="font-family: poppins ; font-weight:200; font-size:3rem" > <i class="fa-solid fa-asterisk fa-spin text-warning"></i> Transform   </h1>
-          <h1 style="font-family: poppins ; font-weight:200; font-size:3rem" >Your Sales Forecasting?</h1>
+        <div class="row bg-dark m-0 mt-5 p-4" style=" background: linear-gradient(190deg, #0b54c6, #000000);" >
+          <h3 style="font-family: poppins ; font-weight:200; font-size:2rem" >Ready to<i class="fa-solid fa-arrow-right ms-3"></i></h3>
+          <h3 style="font-family: poppins ; font-weight:200; font-size:2rem" > <i class="fa-solid fa-asterisk fa-spin text-warning"></i> Transform   </h3>
+          <h3 style="font-family: poppins ; font-weight:200; font-size:2rem" >Your Sales Forecasting?</h3>
           <div class="my-4">
             <a class="btn btn-danger btn-lg " href="#"><i class="fas fa-bolt me-2"></i>Start Free Demo</a>
           </div>
