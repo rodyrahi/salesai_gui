@@ -8,7 +8,7 @@ import uvicorn
 app = FastAPI()
 
 # Blocked IPs
-BLOCKED_IPS = {"185.177.72.3" ,"52.169.54.134"}
+BLOCKED_IPS = {"185.177.72.3" ,"52.169.54.134","37.66.177.118"}
 
 # Middleware to block IPs
 class BlockIPMiddleware(BaseHTTPMiddleware):
