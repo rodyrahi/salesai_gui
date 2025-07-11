@@ -49,6 +49,9 @@ async def about(request: Request):
 async def contact(request: Request):
     return templates.TemplateResponse("contact.html", {"request": request})
 
+@app.get("/pricing", response_class=HTMLResponse)
+async def contact(request: Request):
+    return templates.TemplateResponse("pricing.html", {"request": request})
 
 if __name__ == "__main__":
-    uvicorn.run("landing_page:app", host="0.0.0.0", port=8090, reload=False)
+    uvicorn.run("landing_page:app", host="0.0.0.0", port=8090, reload=True)
