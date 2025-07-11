@@ -1,0 +1,5 @@
+fastapi
+sqladmin[full]
+sqlalchemy
+uvicorn
+jinja2
