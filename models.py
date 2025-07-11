@@ -1,11 +1,13 @@
+# models.py
+
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
-from database import Base
+
+Base = declarative_base()
 
 class User(Base):
     __tablename__ = "users"
 
-    id = Column(Integer, primary_key=True, index=True)
-    sub = Column(String, unique=True, index=True)  # Google unique ID
-    name = Column(String)
-    email = Column(String, unique=True, index=True)
-    picture = Column(String)
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    email = Column(String, nullable=False)
