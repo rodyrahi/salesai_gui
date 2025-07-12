@@ -10,7 +10,7 @@ import secrets
 
 from models import Base, User
 
-DATABASE_URL = "sqlite+aiosqlite:///./test.db"
+DATABASE_URL = "sqlite+aiosqlite:///./user.db"
 
 engine = create_async_engine(DATABASE_URL, echo=True)
 async_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)
